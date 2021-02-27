@@ -1,0 +1,16 @@
+var myCollapse = document.getElementById('flush-collapseOne')
+  var bsCollapse = new bootstrap.Collapse('flush-headingOne', {
+    toggle: true
+  })
+
+
+
+
+
+
+
+
+   $(document).ready(function(){
+  $(".accordion").click(function(){
+    $(".collapse").collapse('hide');
+  });

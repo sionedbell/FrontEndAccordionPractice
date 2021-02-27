@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300;400;700&display=swap" rel="stylesheet"> 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <title>Frontend Mentor | FAQ Accordion Card</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    body {color: hsl(238, 29%, 16%);margin: 100px;background: linear-gradient(180deg,hsl(273, 75%, 66%) 0%, hsl(240, 73%, 65%)100%) no-repeat}
+    .card {-webkit-box-shadow: 1px 67px 100px -40px rgba(0,0,0,0.39); overflow: hidden;
+-moz-box-shadow: 1px 67px 100px -40px rgba(0,0,0,0.39);
+box-shadow: 1px 67px 100px -40px rgba(0,0,0,0.39);
+ height:650px; width:1250px; transform:translate(5%, 0%);border-radius: 20px;background-color: white;}
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+    .cardbox { z-index: 2; transform:translate(-35%, -210%); position:fixed;
+
+}
+    p {font-family: 'Kumbh Sans', sans-serif; text-align: left;}
+    h1 {padding-top: 100px;font-family: 'Kumbh Sans', sans-serif; font-weight: bold;text-align: left;}
+    .cardtext {color: hsl(238, 29%, 16%);font-family: 'Kumbh Sans', sans-serif;font-weight:bold 700; margin-left: 500px;}
+.illust { height: 660px; width: 600px; transform:translate(-15%, -90%);}
+.container {color: hsl(238, 29%, 16%);transform:translate(20%, 0%); height: 500px; width: 500px;padding-left: 150px;}
+.accordion-item h2 { font-family: 'Kumbh Sans', sans-serif; margin: 0; font-size: 1.1em; color:hsl(238, 29%, 16%);
+padding: 0.4em; color: rgb(0, 0, 0); background-color: rgb(255, 255, 255); border-bottom: 1px solid 
+rgb(255, 255, 255); }
+a:hover { cursor: pointer; color:hsl(14, 88%, 65%) }
+.accordion-item div {   color:hsl(238, 29%, 16%);margin: 0; padding: 1em 0.4em;
+background-color: rgb(255, 255, 255); border-bottom: 1px solid rgb(255, 255, 255); }
+.accordion-item.hide h2 { color: rgb(0, 0, 0); background-color: rgb(255, 255, 255); }
+.accordion-item.hide div { display: none; }
+.collapsed {color:hsl(238, 29%, 16%);}
+.accordion-item {padding-bottom: 5px;padding-top: 5px; border-bottom: 1px solid hsl(240, 5%, 91%);}
+.downarrow {margin-left: 450px;}
+.bgshapes {z-index:-1;height: 1000px; width: 1000px; position:absolute; transform:translate(-50%, -25%)}
+
+  </style>
+</head>
+<body>
+
+  <div class="card"> <img class="bgshapes" src="images/bg-pattern-desktop.svg">
+    <div class="cardtext">
+   
+</div>
+
+
+
+<div class="container">
+  <h1>FAQ</h1>
+  <div id="accordion">
+  <div class="accordion accordion-flush" data-bs-toggle="collapse" id="accordionFlushExample">
+    <div class="accordion-item">
+      <h2 class="accordion-item h2" id="flush-headingOne">
+ 
+         <a class="collapsed card-link" data-toggle="collapse">
+    
+          How many team members can I invite?
+        </a><img class="downarrow" src="images/icon-arrow-down.svg">
+      </h2>
+      <div id="flush-collapseOne" class="accordion-collapse collapse" data-parent="#accordion"
+      aria-labelledby="flush-headingOne">
+      
+        <div class="accordion-body">You can invite up to 2 additional users on the Free plan.
+           There is no limit on 
+          team members for the Premium plan.</div>
+      </div>
+    </div>
+    
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="flush-headingTwo">
+        <a class="collapsed card-link" data-toggle="collapse">
+
+        What is the maximum file upload size?
+      </a><img class="downarrow" src="images/icon-arrow-down.svg">
+      </h2>
+      <div id="flush-collapseTwo" class="accordion-collapse collapse" 
+      data-parent="#accordion" aria-labelledby="flush-headingTwo">
+        <div class="accordion-body">  No more than 2GB. 
+          All files in your account must fit your allotted storage space.</div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="flush-headingThree">
+        <a class="collapsed card-link" data-toggle="collapse">
+          How do I reset my password?
+        </a><img class="downarrow" src="images/icon-arrow-down.svg">
+      </h2>
+      <div id="flush-collapseThree" class="accordion-collapse collapse" data-parent="#accordion"  
+      aria-labelledby="flush-headingThree">
+        <div class="accordion-body"> Click “Forgot password” from the login page or 
+          “Change password” from your profile page.
+          A reset link will be emailed to you.
+        
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="flush-headingFour">
+      <a class="collapsed card-link" data-toggle="collapse">
+        Can I cancel my subscription?
+      </a><img class="downarrow" src="images/icon-arrow-down.svg">
+    </h2>
+    <div id="flush-collapseFour" class="accordion-collapse collapse" 
+    data-parent="#accordion" aria-labelledby="flush-headingFour">
+      <div class="accordion-body"> Yes! 
+        Send us a message and we’ll process your request no questions asked.</div>
+      
+      </div>
+    </div>
+  </div>
+
+      
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="flush-headingFive">
+            <a class="collapsed card-link" data-toggle="collapse">
+              Do you provide additional support?
+            </a><img class="downarrow" src="images/icon-arrow-down.svg">
+          </h2>
+          <div id="flush-collapseFive" class="accordion-collapse collapse" 
+          data-parent="#accordion" aria-labelledby="flush-headingFive">
+            <div class="accordion-body"> Chat and email support is available 24/7.
+               Phone lines are open during normal business hours.
+          
+              </div>
+          </div>
+            </div>
+          </div>
+       
+          
+  <img class="illust" src="images/illustration-woman-online-desktop.svg">
+</div>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://www.frontendmentor.io/profile/sionedbell">SB</a>.
+  </div>
+  <img class="cardbox" src="images/illustration-box-desktop.svg">
+  <script>
+ $(document).ready(function(){
+  $("#flush-headingOne").click(function(){
+    $("#flush-collapseOne").collapse('show');
+  });
+  $("#flush-headingTwo").click(function(){
+    $("#flush-collapseTwo").collapse('show');
+  });
+  $("#flush-headingThree").click(function(){
+    $("#flush-collapseThree").collapse('show');
+  });
+});
+  </script>
+<script>
+$(document).ready(function(){
+  $("#flush-headingFour").click(function(){
+    $("#flush-collapseFour").collapse('show');
+  });
+  $("#flush-headingFive").click(function(){
+    $("#flush-collapseFive").collapse('show');
+  });
+});
+
+</script>
+
+
+   <script>
+      $(document).ready(function(){
+  $("#flush-headingOne").click(function(){
+    $("#flush-collapseOne").collapse('hide');
+  });
+  $("#flush-headingTwo").click(function(){
+    $("#flush-collapseTwo").collapse('hide');
+  });
+  $("#flush-headingThree").click(function(){
+    $("#flush-collapseThree").collapse('hide');
+  });
+});
+
+  </script>
+<script>
+  $(document).ready(function(){
+  $("#flush-headingFour").click(function(){
+    $("#flush-collapseFour").collapse('hide');
+  });
+  $("#flush-headingFive").click(function(){
+    $("#flush-collapseFive").collapse('hide');
+  });
+});
+</script>
+</body>
+</html>
